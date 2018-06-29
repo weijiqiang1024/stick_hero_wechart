@@ -8,7 +8,7 @@
     </block>
   </view>
   
-  <view style="width:10px; height:{{stickHight}}px;background:red;">
+  <view animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:red;">
     
   </view>
 </view>

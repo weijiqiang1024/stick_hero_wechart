@@ -10,7 +10,21 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     stickHight: 20,
+    animationData: {},
 
+  },
+  //动画声明
+  onShow: function() {
+    var animation = wx.createAnimation({
+      transformOrigin: "0% 100%",
+      duration: 500,
+      timingFunction: "ease",
+      delay: 0,
+      success: function (res) {
+        console.log("res")
+      }
+    })
+    this.animation = animation;
   },
   //监听touch事件
   mytouchstart: function() {
@@ -22,14 +36,22 @@ Page({
     console.log(this.data.stickHight, 66666);
     //清除定时器
     clearInterval(timer);
+    //开始旋转
+    console.log(this.animation);
+    this.animation.rotate(90).step();
+    console.log(this.animation);
+    this.setData({
+      animationData: this.animation.export()
+    });
+
   },
   stickIncrease: function() {
     timer = setInterval(() => {
-      this.data.stickHight = this.data.stickHight+5;
+      this.data.stickHight = this.data.stickHight + 2;
       this.setData({
         stickHight: this.data.stickHight
       })
-    }, 50);
+    }, 20);
   },
   //转发事件
   onShareAppMessage: function() {
