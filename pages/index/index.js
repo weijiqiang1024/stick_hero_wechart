@@ -9,14 +9,15 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    stickHight: 20,
+    stickHight: 0,
     animationData: {},
+    viewArr: [`<view id='view111'>1111</view>`, `<view id='view222'>222</view>`],
 
   },
   //动画声明
   onShow: function() {
     var animation = wx.createAnimation({
-      transformOrigin: "0% 100%",
+      transformOrigin: "right bottom",
       duration: 500,
       timingFunction: "ease",
       delay: 0,

@@ -8,7 +8,9 @@
     </block>
   </view>
   
-  <view animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:red;">
+  <view id="_stick" animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:black;">
+  <!-- <view id="_stick" animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:black;"> -->
     
   </view>
+  {{viewArr}}
 </view>

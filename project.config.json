@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
 	"appid": "wx16e3ced1f60d08ca",
-	"projectname": "testPro",
+	"projectname": "stick_hero",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
