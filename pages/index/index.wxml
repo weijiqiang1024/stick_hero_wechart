@@ -12,5 +12,5 @@
   <!-- <view id="_stick" animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:black;"> -->
     
   </view>
-  {{viewArr}}
+  <!-- {{viewArr}} -->
 </view>
