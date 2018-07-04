@@ -7,10 +7,10 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  
-  <view id="_stick" animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:black;">
-  <!-- <view id="_stick" animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:black;"> -->
-    
+
+  <view id="_stick" animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:black;"></view>
+  <view wx:for="{{stonArr}}" wx:for-index="idx" wx:for-item="itemName">
+    <view>{{idx}}: {{itemName.width}}</view>
   </view>
-  <!-- {{viewArr}} -->
+
 </view>

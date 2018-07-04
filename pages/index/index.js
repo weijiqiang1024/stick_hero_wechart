@@ -1,4 +1,5 @@
 //index.js
+const GameManager = require('./game_manager.js');
 //获取应用实例
 const app = getApp();
 let timer;
@@ -11,8 +12,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     stickHight: 0,
     animationData: {},
-    viewArr: [`<view id='view111'>1111</view>`, `<view id='view222'>222</view>`],
+    stonArr: [],
 
+  },
+  onLoad: function(options) {
+    this.GameManager = new GameManager();
+    let stonArr = this.GameManger.setup();
+    debugger;
+    this.setData({
+      stonArr: stonArr,
+    });
   },
   //动画声明
   onShow: function() {
@@ -21,7 +30,7 @@ Page({
       duration: 500,
       timingFunction: "ease",
       delay: 0,
-      success: function (res) {
+      success: function(res) {
         console.log("res")
       }
     })
