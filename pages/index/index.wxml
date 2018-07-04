@@ -1,16 +1,9 @@
 <!--index.wxml-->
-<view class="container" bind:touchstart="mytouchstart" bind:touchend="mytouchend">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
+<view class="container">
+  	
+	<view wx:for-items="{{gameList}}" wx:for-index="idx" wx:key="idx" class="usermotto">
+	    <button type="primary" disabled="{{disabled}}" bindtap="start{{item}}"> {{item}} </button>
+	</view>
 
-  <view id="_stick" animation="{{animationData}}" style="width:2px; height:{{stickHight}}px;background:black;"></view>
-  <view wx:for="{{stonArr}}" wx:for-index="idx" wx:for-item="itemName">
-    <view>{{idx}}: {{itemName.width}}</view>
-  </view>
-
+	<text class="more">更多内容，敬请期待...</text>
 </view>

@@ -26,11 +26,9 @@
   align-items: center;
 }
 
-/**index.wxss**/
-.more{
-  /*浅灰色*/
-	color: #aaa;
-	font-size: 14px;
-	position:fixed;
-	bottom: 20px;
+.ston-area{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+    
 }

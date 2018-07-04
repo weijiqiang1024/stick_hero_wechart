@@ -1,6 +1,6 @@
 //石头对象
 
-function Ston(width, height, color, clinetX, clinetY) {
+function Ston(width, height, color, clientX, clinetY) {
   var obj = new Object();
   //石头宽高
   obj.height = height;
@@ -8,7 +8,7 @@ function Ston(width, height, color, clinetX, clinetY) {
   //颜色
   obj.color = color;
   //位置信息
-  obj.clinetX = clinetX;
+  obj.clientX = clientX;
   obj.clinetY = clinetY;
 
   return obj;

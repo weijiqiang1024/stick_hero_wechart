@@ -2,28 +2,30 @@
 const Ston = require('./stone.js');
 
 function GameManager() {
-
+    this.text = 111;
 }
 
 GameManager.prototype = {
 
   //初始化参数
   setup: function() {
-    this.initCreatSton();
+    debugger;
+    return this.initCreatSton();
   },
   //初始化是石头数组
   initCreatSton: function() {
+    debugger;
     //获取屏幕宽度
     let appWidth = wx.getSystemInfoSync().windowWidth;
     //生成石头对象
     let stonArr = [];
-    let color = 'balck';
-    let height = 20;
-    let ston1 = new Ston(20, height, color, 0, 0);
+    let color = 'black';
+    let height = 50;
+    let ston1 = new Ston(40, height, color, 0, 0);
     stonArr.push(ston1);
     let stonWidth = this.generatorStonWidth();
-    let clinetX = this.generatorClinetX(ston1.width, appWidth);
-    let ston2 = new Ston(stonWidth, height, color, clinetX, 0);
+    let clientX = this.generatorClientX(ston1.width, appWidth);
+    let ston2 = new Ston(stonWidth, height, color, clientX, 0);
     stonArr.push(ston2);
     return stonArr;
   },
@@ -33,7 +35,7 @@ GameManager.prototype = {
    * @ptrStonClientX:前一个石头X轴坐标
    * @appWidth:app宽度
    */
-  generatorClinetX: function(preStonWidth, appWidth) {
+  generatorClientX: function(preStonWidth, appWidth) {
 
     return parseInt(Math.random() * (appWidth - preStonWidth) + preStonWidth);
 
